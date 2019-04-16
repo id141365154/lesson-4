@@ -1,3 +1,6 @@
+.react-router-modal__container{
+  top:0;
+}
 .react-router-modal__container.modal {
   width: 100vw;
   position: absolute;
@@ -13,6 +16,7 @@
   width: 100vw;
   height: 100vh;
   z-index: 5;
+  background: #fff;
 }
 
 .react-router-modal__backdrop {
@@ -28,6 +32,7 @@
 .react-router-modal__backdrop--in {
   opacity: 0.6;
   transition: opacity linear 200ms;
+
 }
 
 .react-router-modal__backdrop--out {
@@ -38,6 +43,8 @@
 .react-router-modal__modal--in {
   transition: transform cubic-bezier(0.17, 0.96, 0.36, 0.99) 300ms;
   transform: translateY(0%);
+  background: #fff;
+  height: 100%;
 }
 
 .react-router-modal__modal--out {
@@ -45,6 +52,4 @@
   transform: translateY(100%);
 }
 
-.react-router-modal__container{
-  top:0;
-}
+
