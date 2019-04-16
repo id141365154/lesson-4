@@ -11,5 +11,6 @@ export const GlobalStyles = createGlobalStyle`
     font-weight: normal;
     color: ${props => props.theme.pallete.gray2};
   }
+  
 
 `

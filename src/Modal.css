@@ -1,4 +1,4 @@
-.modal {
+.react-router-modal__container.modal {
   width: 100vw;
   position: absolute;
   top: 0;
@@ -43,4 +43,8 @@
 .react-router-modal__modal--out {
   transition: transform cubic-bezier(0.17, 0.96, 0.36, 0.99) 300ms;
   transform: translateY(100%);
+}
+
+.react-router-modal__container{
+  top:0;
 }
