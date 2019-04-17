@@ -9,6 +9,3 @@ export const addToHistory = createAction('selectCountry/ADD_TO_HISTORY')
 export const clearSearch = createAction('selectCountry/CLEAR_SEARCH')
 export const setSelectValue = createAction('selectCountry/SET_SELECT_VALUE')
 
-//export const closeSelect = createAction('@@router/LOCATION_CHANGE')
-
-
