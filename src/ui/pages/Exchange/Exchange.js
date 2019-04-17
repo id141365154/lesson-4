@@ -26,6 +26,10 @@ export const Exchange = ({
   changeTerms,
   changeValuesTrigger,
   push,
+  opentCountrySelectFrom,
+  opentCountrySelectTo,
+  countryFrom,
+  countryTo
 }) => (
   <PageTemplate>
     <Header icon="back" />
@@ -33,13 +37,13 @@ export const Exchange = ({
       <Wrapper>
         <SelectField
           label="Страна 1"
-          value="Россия"
-          onPress={() => push(`${routes.SELECT}`)}
+          value={countryFrom.title}
+          onPress={opentCountrySelectFrom}
         />
         <SelectField
           label="Страна 2"
-          value="Англия"
-          onPress={() => push(`${routes.SELECT}`)}
+          value={countryTo.title}
+          onPress={opentCountrySelectTo}
         />
         <Divider />
         <HBox />
@@ -86,5 +90,9 @@ Exchange.propTypes = {
   toTime: PropTypes.string.isRequired,
   changeTerms: PropTypes.func.isRequired,
   changeValuesTrigger: PropTypes.func.isRequired,
+  opentCountrySelectFrom: PropTypes.func,
+  opentCountrySelectTo: PropTypes.func,
   push: PropTypes.func.isRequired,
+  countryFrom: PropTypes.object,
+  countryTo: PropTypes.object
 }

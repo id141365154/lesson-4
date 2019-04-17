@@ -7,3 +7,6 @@ export const getFromValue = state => state.exchange.fromValue
 export const getToValue = state => state.exchange.toValue
 
 export const getExchangeRate = state => state.exchange.exchangeRate
+
+export const getCountryFrom = state => state.exchange.from
+export const getCountryTo = state => state.exchange.to

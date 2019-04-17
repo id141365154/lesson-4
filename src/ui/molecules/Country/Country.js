@@ -10,7 +10,7 @@ const Container = styled.div`
 `
 
 export const Country = ({ title, id, onPress }) => (
-  <Container onClick={() => onPress(id)}>
+  <Container onClick={() => onPress({title:title,id:id})}>
     <Body2>{title}</Body2>
   </Container>
 )
