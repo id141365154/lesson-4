@@ -17,6 +17,6 @@ export const Country = ({ title, id, onPress }) => (
 
 Country.propTypes = {
   title: PropTypes.string.isRequired,
-  id: PropTypes.string,
+  id: PropTypes.array,
   onPress: PropTypes.func.isRequired,
 }

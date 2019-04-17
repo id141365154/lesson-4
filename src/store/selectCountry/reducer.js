@@ -47,6 +47,7 @@ export const reducer = createReducer(
         newState.countriesErr = false
         return newState
     },
+   
   },
   initialState,
 )

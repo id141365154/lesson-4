@@ -27,7 +27,7 @@ export const SelectCountry = ({ push , typeStartTrigger, countries, countryChoic
       ? <>
         <CountriesList
         title={'Результаты'}
-        list={countries.countries.map(({name,alpha2Code})=>({title:name, id: alpha2Code}))}
+        list={countries.countries.map(({name,currencies})=>({title:name, id: currencies}))}
         selectCountry={countryChoiceTrigger}
         />
       </>

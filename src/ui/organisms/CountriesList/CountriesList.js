@@ -26,7 +26,7 @@ CountriesList.propTypes = {
   list: PropTypes.arrayOf(
     PropTypes.shape({
       title: PropTypes.string.isRequired,
-      id: PropTypes.string.isRequired,
+      id: PropTypes.array.isRequired,
     }),
   ).isRequired,
   selectCountry: PropTypes.func.isRequired,

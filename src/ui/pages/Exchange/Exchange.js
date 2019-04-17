@@ -48,19 +48,21 @@ export const Exchange = ({
         <Divider />
         <HBox />
         <TextField
-          label="Российский рубль (RUB)"
+          disabled={countryFrom.id[0].name ? false : true }
+          label={countryFrom.id[0].name ? `${countryFrom.id[0].name} (${countryFrom.id[0].code})`: null}
           onChange={value => changeValuesTrigger({ value, convertDirection: 'from' })}
           tip="Текст подсказки к полю"
           value={fromValue}
-          endAdornment="₽"
+          endAdornment={countryFrom.id[0].symbol}
         />
         <HBox />
         <TextField
-          label="Фунт стерлингов (GBP)"
+          disabled={countryTo.id[0].name ? false : true }
+          label={countryTo.id[0].name ? `${countryTo.id[0].name} (${countryTo.id[0].code})` : null}
           onChange={value => changeValuesTrigger({ value, convertDirection: 'to' })}
           value={toValue}
           tip="Текст подсказки к полю"
-          endAdornment="£"
+          endAdornment={countryTo.id[0].symbol}
         />
         <HBox />
         <DeliveryTime

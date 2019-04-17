@@ -9,7 +9,17 @@ const initialState = {
     toTime: '10:00',
     fromValue: '100',
     toValue: '1',
-    exchangeRate: 0.012,
+    exchangeRate: 0,
+    from:{title:'Выберите страну 1', id:[{
+        code:'',
+        name:'',
+        symbol:''
+    }]},
+    to:{title:'Выберите страну 1', id:[{
+        code:'',
+        name:'',
+        symbol:''
+    }]}
 }
 
 export const reducer = createReducer(
@@ -46,7 +56,15 @@ export const reducer = createReducer(
             let newState = {...state}
             newState[payload.select] = payload.value
             return newState
-        }
+        },
+        [actionsSelectCountry.setExchangeRate]: (state, action) => {
+            console.log(action)
+            let newState = {... state}
+            newState.exchangeRate = action.rates[Object.keys(action.rates)[0]]
+            newState.exchangeBaseName = action.base
+            newState.exchangeRateName = Object.keys(action.rates)[0]
+            return newState
+        },
     },
     initialState,
 )
