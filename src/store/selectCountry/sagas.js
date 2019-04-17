@@ -63,6 +63,8 @@ function* worker(action) {
                         put(push('/exchange'))
                     ])
                 }else{
+                    alert('Oops, Can`t get curency, Try later')
+                    yield put(push('/exchange'))
                     console.warn(res)
                 }
             }catch(e){
